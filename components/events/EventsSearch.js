@@ -2,8 +2,12 @@ import Button from "../ui/Button";
 import styles from './EventsSearch.module.css';
 
 const EventsSearch = (props) => {
+    const submitHandler = (event) => {
+        event.preventDefault();
+    };
+
     return (
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={submitHandler}>
             <div className={styles.controls}>
                 <div className={styles.control}>
                     <label htmlFor="year">Year</label>
